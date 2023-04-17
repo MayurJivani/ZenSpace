@@ -25,8 +25,12 @@ export default function Sidebar() {
                     <div className="menu">
 
                         <li className="search-box">
-                            <i className='bx bx-search icon'></i>
-                            <input type="text" placeholder="Search..." />
+                            <button className="btn-box">1</button>
+                            <button className="btn-box">2</button>
+                            <button className="btn-box">3</button>
+                            <button className="btn-box">4</button>
+                            <button className="btn-box">5</button>
+                            <button className="btn-box">6</button>
                         </li>
 
                         <ul className="menu-links">

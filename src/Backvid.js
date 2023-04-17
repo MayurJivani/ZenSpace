@@ -11,7 +11,7 @@ export default function Backvid() {
         width: '1920',
         playerVars: {
             controls: 0,
-            autoplay: 1,
+            autoplay: 0,
             modestbranding: 1,
         },
     };
