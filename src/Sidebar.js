@@ -24,14 +24,26 @@ export default function Sidebar() {
                 <div className="menu-bar">
                     <div className="menu">
 
-                        <li className="search-box">
-                            <button className="btn-box">1</button>
-                            <button className="btn-box">2</button>
-                            <button className="btn-box">3</button>
-                            <button className="btn-box">4</button>
-                            <button className="btn-box">5</button>
-                            <button className="btn-box">6</button>
-                        </li>
+                        <div className="search-box">
+                            <li className="btn-box">
+                                <span>🪟</span>
+                            </li>
+                            <li className="btn-box">
+                                <span>🌻</span>
+                            </li>
+                            <li className="btn-box">
+                                <span>🪴</span>
+                            </li>
+                            <li className="btn-box">
+                                <span>🏚️</span>
+                            </li>
+                            <li className="btn-box">
+                                <span>✨</span>
+                            </li>
+                            <li className="btn-box">
+                                <span>🗻</span>
+                            </li>
+                        </div>
 
                         <ul className="menu-links">
                             <li className="nav-link">
@@ -57,30 +69,32 @@ export default function Sidebar() {
 
                             <li className="nav-link">
                                 <a href="/">
-                                    <i className='bx bx-heart icon' ></i>
-                                    <span className="text nav-text">Likes</span>
-                                </a>
-                            </li>
-
-                            <li className="nav-link">
-                                <a href="/">
                                     <i className='bx bx-time  icon' ></i>
                                     <span className="text nav-text">Timer</span>
                                 </a>
                             </li>
 
+                            <li className="nav-link">
+                                <a href="/">
+                                    <i className='bx bx-heart icon' ></i>
+                                    <span className="text nav-text">Likes</span>
+                                </a>
+                            </li>
+
+                        
+
                         </ul>
                     </div>
 
                     <div className="bottom-content">
-                        <li className="">
+                        {/* <li className="">
                             <a href="/">
                                 <i className='bx bx-log-out icon' ></i>
                                 <span className="text nav-text">Logout</span>
                             </a>
-                        </li>
+                        </li> */}
 
-                        <li className="mode">
+                        {/* <li className="mode">
                             <div className="sun-moon">
                                 <i className='bx bx-moon icon moon'></i>
                                 <i className='bx bx-sun icon sun'></i>
@@ -90,7 +104,7 @@ export default function Sidebar() {
                             <div className="toggle-switch">
                                 <span className="switch"></span>
                             </div>
-                        </li>
+                        </li> */}
 
                     </div>
                 </div>

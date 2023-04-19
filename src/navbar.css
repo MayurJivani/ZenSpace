@@ -86,6 +86,7 @@
     font-weight: 500;
     white-space: nowrap;
     opacity: 1;
+    box-shadow: inset;
 }
 
 .sidebar.close .text {
@@ -318,14 +319,23 @@ body.dark .home .text {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: transparent;
+    position:relative;
 }
 
-.search-box .btn-box {
+.btn-box {
     position: static;
     width: 50px;
     border: 2px solid #282828;
-    border-radius: 28px;
-    padding: 20px 30px;
-    margin-right: 10px;
+    border-radius: 20px;
+    padding: 30px 30px;
+    margin: 5px 5px;
+    background-color: transparent;
+    position: relative;
+}
+
+.btn-box span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
