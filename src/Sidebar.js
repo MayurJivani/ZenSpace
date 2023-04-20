@@ -76,8 +76,8 @@ export default function Sidebar() {
 
                             <li className="nav-link">
                                 <a href="/">
-                                    <i className='bx bx-heart icon' ></i>
-                                    <span className="text nav-text">Likes</span>
+                                    <i className='bx bx-search icon' ></i>
+                                    <span className="text nav-text">Customs</span>
                                 </a>
                             </li>
 
