@@ -1,25 +1,19 @@
-import React from 'react'
-import YouTube, { YouTubeProps } from 'react-youtube';
+import React from 'react';
+import YouTube from 'react-youtube';
 
-export default function Backvid() {
-    const onPlayerReady: YouTubeProps['onReady'] = (event) => {
-        event.target.pauseVideo();
-    }
-
-    const opts: YouTubeProps['opts'] = {
-        height: '1080',
-        width: '1920',
+export default function Backvid(){
+    const opts = {
+        height: '390',
+        width: '640',
         playerVars: {
-            controls: 0,
-            autoplay: 0,
-            modestbranding: 1,
+            // https://developers.google.com/youtube/player_parameters
+            autoplay: 1,
         },
     };
-    return (
 
-        <div className='BackVid'>
-            <YouTube videoId="sUwD3GRPJos" opts={opts} onReady={onPlayerReady}/>
-            
-        </div>
-    )
+    return (<div className='BackVid'>
+        <YouTube videoId="2g811Eo7K8U" opts={opts}  />
+    </div>)
+
 }
+

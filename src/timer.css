@@ -1,0 +1,50 @@
+
+.hourT {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 80px;
+    height: 80px;
+    display:block;
+    color: #282c34;
+    outline: none;
+    border: none;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .minT {
+    position: absolute;
+    top: 35px;
+    left: 160px;
+    width: 80px;
+    height: 80px;
+    display:block;
+    color: #282c34;
+    outline: none;
+    border: none;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .secT {
+    position: absolute;
+    top: 35px;
+    left: 280px;
+    width: 80px;
+    height: 80px;
+    display:block;
+    color: #282c34;
+    outline: none;
+    border: none;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+  }
+  input:hover {
+    background-color: #928f8f;
+  }
+ 

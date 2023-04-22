@@ -21,6 +21,8 @@
     --tran-03: all 0.3s ease;
     --tran-04: all 0.3s ease;
     --tran-05: all 0.3s ease;
+    --tran-06: all 0.5s ease;
+    
 }
 
 ::selection {
@@ -195,12 +197,13 @@ body.dark .sidebar header .toggle {
     transition: var(--tran-03);
 }
 
-.sidebar li a:hover {
+.sidebar li:hover {
     background-color: var(--primary-color);
+    border-radius: 20px;
 }
 
-.sidebar li a:hover .icon,
-.sidebar li a:hover .text {
+.sidebar li:hover .icon,
+.sidebar li:hover .text {
     color: var(--sidebar-color);
 }
 
@@ -339,4 +342,134 @@ body.dark .home .text {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.YTsearch {
+    position: fixed;
+    top: 10%;
+    right: 40%;
+    height: 18%;
+    width: 400px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, .02);
+    transition: var(--tran-05);
+    z-index: 100;
+    border-radius: 7px;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    
+}
+
+.YTsearch.close {
+    opacity: 0%;
+    transition: var(--tran-06);
+
+}
+.YTvid{
+    position: relative;
+    margin: auto;
+    top: 15%;
+    left: -15%;
+    width: 60%;
+    height: 24%;
+    font-size: small;
+}
+.YTaud{
+    position: relative;
+    margin: auto;
+    top: 35%;
+    left: -15%;
+    width: 60%;
+    height: 24%;
+    font-size: small;
+}
+.submit-vid{
+    position: fixed;
+    top: 19%;
+    right: 7%;
+    margin: auto;
+    background-color: #695CFE;
+    width: 20%;
+    height: 20%;
+    border-radius: 5px;
+    border: #696969;
+    color: white;
+    font-size: 12px;
+}
+.submit-vid:hover{
+    box-shadow: 0 5px 50px rgba(255, 255, 255, 0.3);
+}
+.submit-aud{
+    position: fixed;
+    top: 58.5%;
+    right: 7%;
+    margin: auto;
+    background-color: #695CFE;
+    width: 20%;
+    height: 20%;
+    border-radius: 5px;
+    border: #696969;
+    color: white;
+    font-size: 12px;
+}
+.submit-aud:hover{
+    box-shadow: 0 5px 50px rgba(255, 255, 255, 0.3);
+}
+
+.volumeBTN.mute{
+    background-image: url(./sound.png);
+    transition: var(--tran-03);
+}
+.volumeBTN{
+    position: fixed;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(106, 93, 254);
+    right: 20px;
+    bottom: 10px;
+    border: none;
+    background-size: auto;
+}
+.volumeBTN:hover{
+    box-shadow: 0 5px 50px rgba(106, 93, 254, 0.8);
+}
+#volumestyle{
+    color: rgb(255, 255, 255, 0.9);
+    position: static;
+
+    
+}
+.Timer.close{
+    opacity: 0%;
+    
+}
+.Timer.open{
+    top: 100px;
+    right: 50px;
+    height: 200px;
+    position: absolute;
+    width: 400px;
+    background-color: rgba(126, 115, 247, 0.4);
+    border-radius: 10px;
+    transition: var(--tran-06);
+}
+.btn-timer{
+    top: 120px;
+    position: relative;
+    width: 50px;
+    right: 20px;
+}
+.btn-timerpause{
+    top: 120px;
+    position: relative;
+    width: 50px;
+    right: 20px;
+}
+.btn-timerstop{
+    top: 120px;
+    position: relative;
+    width: 50px;
+    left: 20px;
+    align-content: center;
 }

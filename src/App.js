@@ -1,12 +1,17 @@
 import './App.css';
 import Backvid from './Backvid';
+import CountdownTimer from './CountDown';
 import Sidebar from './Sidebar.js';
+
+
 
 function App() {
   return (
     <>
-      <Backvid />
+      {/* <BackAud/> */}
       <Sidebar />
+     {/* <Backvid/> */}
+    
     </>
   );
 }
