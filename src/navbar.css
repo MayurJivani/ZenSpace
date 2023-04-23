@@ -466,7 +466,7 @@ body.dark .home .text {
     
 }
 .Timer.open{
-    top: 100px;
+    top: 150px;
     right: 50px;
     height: 200px;
     position: absolute;
