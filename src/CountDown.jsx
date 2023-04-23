@@ -14,7 +14,7 @@ export default function CountdownTimer() {
 
   const [showEndScreen, setShowEndScreen] = useState({
     show: false,
-    message: "Happy coding in 2023",
+    message: "Timer is up!!",
   });
   useEffect(() => {
     let interval;
@@ -86,7 +86,7 @@ export default function CountdownTimer() {
   return (
     <div>
       {showEndScreen.show && (
-        <h1 className="title  text-light">{showEndScreen.message}</h1>
+        <h1 className="timeout">{showEndScreen.message}</h1>
       )}
       <Timer
         milliseconds={milliseconds}

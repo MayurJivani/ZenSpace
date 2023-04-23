@@ -3,13 +3,18 @@ import  { useState } from "react";
 import './navbar.css';
 import YouTube, { YouTubeProps } from 'react-youtube';
 import CountDown from "./CountDown";
-
+import { TodoProvider } from "react-use-todo";
+import AddTodoInput from './components/AddTodoInput';
+import Todos from './components/Todos';
 
 export default function Sidebar(){
+    const [activeSpace, setactiveSpace] = useState(0);
     const [step, setStep] = useState(0);
     const [volumeBTN, setvolumeBTN] = useState(true);
     const [sidebar, setSidebar] = useState(false);
     const [CTimer, setCTimer] = useState(false);
+    const [CTodo, setCTodo] = useState(false);
+    const showTodo = () => setCTodo(!CTodo)
     const showTimer = () => setCTimer(!CTimer)
     const showSidebar = () => setSidebar(!sidebar)
     const [YTsearch, setYTsearch] = useState(false);
@@ -106,6 +111,179 @@ export default function Sidebar(){
         }
         
     }
+    function pickSpace(spaceID){
+
+        const spaceWindow = [
+            {
+              sid: "6thiNOknHkk"
+            },
+            {
+                sid: "iLs04Z6uBqU"
+            },
+            {
+                sid: "xg1gNlxto2M"
+            },
+            {
+                sid: "64aVT-PKibU"
+            },
+            {
+                sid: "y27-OpyQJeE"
+            },
+            {
+                sid: "8hwelG6YVQY"
+            }
+          ];
+          const spaceSWM = [
+            {
+              sid: "0-fJS-j_UEE"
+            },
+            {
+                sid: "kncTDoCPxxQ"
+            },
+            {
+                sid: "NEn3iAv25UA"
+            },
+            {
+                sid: "DXT9dF-WK-I"
+            },
+            {
+                sid: "3MBTtuEXMpc"
+            },
+            {
+                sid: "nOIXSTplPwQ"
+            }
+          ];const spaceCafe = [
+            {
+              sid: "MYPVQccHhAQ"
+            },
+            {
+                sid: "qMHbh6XmgwM"
+            },
+            {
+                sid: "s_m1QKaQXVc"
+            },
+            {
+                sid: "9f_ZoPzX-Uw"
+            },
+            {
+                sid: "dBsfUtjTbi0"
+            },
+            {
+                sid: "uby4pigzp6Q"
+            }
+          ];const spaceRoom = [
+            {
+              sid: "Vg2WllImVHg"
+            },
+            {
+                sid: "Jvgx5HHJ0qw"
+            },
+            {
+                sid: "VWBZXVXtAv4"
+            },
+            {
+                sid: "-5_NiRTS2nE"
+            },
+            {
+                sid: "edESym1wAm4"
+            },
+            {
+                sid: "uMxoInU-cwU"
+            }
+          ];const spaceDrive = [
+            {
+              sid: "3ma3yXXc3V8"
+            },
+            {
+                sid: "KXkkKm4AwBg"
+            },
+            {
+                sid: "40xZVEFVBuE"
+            },
+            {
+                sid: "F8MN0o6RS9o"
+            },
+            {
+                sid: "H_7XOMO7nJE"
+            },
+            {
+                sid: "YqcMq9tEw0g"
+            }
+          ];const spaceNature = [
+            {
+              sid: "NY1DtR-S9Ds"
+            },
+            {
+                sid: "oc_o5DZM3qc"
+            },
+            {
+                sid: "RSF8KL3xaIk"
+            },
+            {
+                sid: "B5unCXpegAw"
+            },
+            {
+                sid: "AY5qcIq5u2g"
+            },
+            {
+                sid: "KJwYBJMSbPI"
+            }
+          ];
+
+          
+          if(spaceID==6){
+            spropvid(spaceNature[activeSpace].sid);
+            setStep(0)
+            if(activeSpace==5){
+                setactiveSpace(0)
+            }else{
+                setactiveSpace(activeSpace+1)
+            } 
+          }else if(spaceID==1){
+            spropvid(spaceWindow[activeSpace].sid);
+            setStep(0)
+            if(activeSpace==5){
+                setactiveSpace(0)
+            }else{
+                setactiveSpace(activeSpace+1)
+            } 
+          }else if(spaceID==2){
+            spropvid(spaceSWM[activeSpace].sid);
+            setStep(0)
+            if(activeSpace==5){
+                setactiveSpace(0)
+            }else{
+                setactiveSpace(activeSpace+1)
+            }   
+          }else if(spaceID==3){
+            spropvid(spaceCafe[activeSpace].sid);
+            setStep(0)
+            if(activeSpace==5){
+                setactiveSpace(0)
+            }else{
+                setactiveSpace(activeSpace+1)
+            }    
+          }else if(spaceID==4){
+            spropvid(spaceRoom[activeSpace].sid);
+            setStep(0)
+            if(activeSpace==5){
+                setactiveSpace(0)
+            }else{
+                setactiveSpace(activeSpace+1)
+            }   
+          }else if(spaceID==5){
+            spropvid(spaceDrive[activeSpace].sid);
+            setStep(0)
+            if(activeSpace==5){
+                setactiveSpace(0)
+            }else{
+                setactiveSpace(activeSpace+1)
+            }  
+          }
+        return (
+            console.log("Space Changed")
+          );
+    }
     return (
      
         <div className="App">
@@ -122,29 +300,29 @@ export default function Sidebar(){
                         </div>
                     </div>
 
-                    <i className='bx bx-chevron-right toggle' onClick={showSidebar}></i>
+                    <i className='bx bx-chevron-right toggle' id="iconstyle" onClick={showSidebar}></i>
                 </header>
 
                 <div className="menu-bar">
                     <div className="menu">
 
                         <div className="search-box">
-                            <li className="btn-box">
+                            <li className="btn-box" onClick={() => pickSpace(1)}>
                                 <span>🪟</span>
                             </li>
-                            <li className="btn-box">
-                                <span>🌻</span>
+                            <li className="btn-box" onClick={() => pickSpace(2)}>
+                                <span>📖</span>
                             </li>
-                            <li className="btn-box">
+                            <li className="btn-box" onClick={() => pickSpace(3)}>
                                 <span>🪴</span>
                             </li>
-                            <li className="btn-box">
+                            <li className="btn-box" onClick={() => pickSpace(4)}>
                                 <span>🏚️</span>
                             </li>
-                            <li className="btn-box">
-                                <span>✨</span>
+                            <li className="btn-box" onClick={() => pickSpace(5)}>
+                                <span>🚗</span>
                             </li>
-                            <li className="btn-box">
+                            <li className="btn-box" onClick={() => pickSpace(6)}>
                                 <span>🗻</span>
                             </li>
                         </div>
@@ -165,10 +343,10 @@ export default function Sidebar(){
                             </li>
 
                             <li className="nav-link">
-                                
+                                <a onClick={showTodo}>
                                     <i className='bx bx-notepad icon'></i>
                                     <span className="text nav-text">Todo</span>
-                                
+                                </a>
                             </li>
 
                             <li className="nav-link">
@@ -208,8 +386,16 @@ export default function Sidebar(){
             <div className={CTimer ? 'Timer open' : 'Timer close'}>
                     <CountDown/>
              </div>
+             <div className={CTodo ? 'Todo open' : 'Todo close'}>
+                <TodoProvider>
+                    <AddTodoInput />
+                    <ul className="todo-content">
+                    <Todos />
+                    </ul>
+                </TodoProvider>
+             </div>
                 {step == 1 && <YouTube videoId={propaud} opts={musicopts} onReady={onMusicReady}/>}
-                <button className={volumeBTN ? 'volumeBTN ummute' : 'volumeBTN mute'} onClick={onVol}><i class='bx bx-volume-full bx-md' id="volumestyle"></i></button>
+                <button className={volumeBTN ? 'volumeBTN ummute' : 'volumeBTN mute'} onClick={onVol}><i class='bx bx-volume-full bx-md' id="iconstyle"></i></button>
                 
         </div>
         

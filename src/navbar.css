@@ -112,9 +112,11 @@
 }
 
 header .image-text .name {
-    margin-top: 2px;
-    font-size: 18px;
+    margin-top: 10px;
+    font-size: 20px;
     font-weight: 600;
+    position: static;
+    
 }
 
 header .image-text .profession {
@@ -328,7 +330,7 @@ body.dark .home .text {
 .btn-box {
     position: static;
     width: 50px;
-    border: 2px solid #696969;
+    border: 1px solid #696969;
     border-radius: 20px;
     padding: 30px 30px;
     margin: 5px 5px;
@@ -373,7 +375,17 @@ body.dark .home .text {
     width: 60%;
     height: 24%;
     font-size: small;
+    border-radius: 5px;
+    border: none;
+    opacity: 70%;
+    text-align: center;
+    outline: none;
 }
+.YTvid::placeholder{
+    color: black;
+    text-align: center;
+}
+
 .YTaud{
     position: relative;
     margin: auto;
@@ -382,6 +394,15 @@ body.dark .home .text {
     width: 60%;
     height: 24%;
     font-size: small;
+    border-radius: 5px;
+    border: none;
+    opacity: 70%;
+    text-align: center;
+    outline: none;
+}
+.YTaud::placeholder{
+    color: black;
+    text-align: center;
 }
 .submit-vid{
     position: fixed;
@@ -434,9 +455,9 @@ body.dark .home .text {
 .volumeBTN:hover{
     box-shadow: 0 5px 50px rgba(106, 93, 254, 0.8);
 }
-#volumestyle{
+#iconstyle{
     color: rgb(255, 255, 255, 0.9);
-    position: static;
+   
 
     
 }
@@ -450,26 +471,149 @@ body.dark .home .text {
     height: 200px;
     position: absolute;
     width: 400px;
-    background-color: rgba(126, 115, 247, 0.4);
+    background-color: rgba(255, 255, 254, 0.01);
     border-radius: 10px;
     transition: var(--tran-06);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 5px 50px rgba(255, 255, 255, 0.1);
 }
 .btn-timer{
     top: 120px;
     position: relative;
     width: 50px;
     right: 20px;
+    opacity: 90%;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
 }
 .btn-timerpause{
     top: 120px;
     position: relative;
     width: 50px;
     right: 20px;
+    opacity: 90%;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
 }
 .btn-timerstop{
     top: 120px;
     position: relative;
     width: 50px;
     left: 20px;
-    align-content: center;
+    justify-content: center;
+    opacity: 90%;
+    border: none;
+    border-radius: 4px;
 }
+.Todo.close{
+    opacity: 0%;
+    
+}
+.Todo.open{
+    position: fixed;
+    right: 50px;
+    top: 35%;
+    height: 200px;
+    width: 300px;
+    background: rgba(255, 255, 255, .01);
+    transition: var(--tran-06);
+    border-radius: 5px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 5px 50px rgba(255, 255, 255, 0.1);
+}
+.todoAdd{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 40px;
+    border-radius: 18px;
+    background-color: #695CFE;
+    color: white;
+    border: transparent;
+}.todoAdd:hover{
+    box-shadow: 0 5px 50px rgba(106, 93, 254, 0.9);
+}
+.todoText{
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    height: 20px;
+    border-color: #fff;
+    border-radius: 18px;
+    align-content: center;
+    border: transparent;
+    opacity: 50%;
+    color: black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    backdrop-filter: blur(6px);
+    outline: none;
+}
+.todoText::placeholder{
+    color: black;
+    text-align: center;
+}
+.TodoTitle{
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    top: 8px;
+    right: 37%;
+    letter-spacing: 0.09em;
+}
+.todo-content{
+    position: absolute;
+    top: 60px;
+    
+}
+.li-todo{
+    position: relative;
+    margin-top: 5px;
+    float:left;
+    color: white;
+    list-style-type:none;
+    
+    flex-wrap: wrap;
+}
+.li-checkbox{
+    position: relative;
+    margin-left: 35px;
+    border-radius: 5px;
+   
+    
+}
+.li-label{
+    position: relative;
+    margin-left: 5px;
+    
+}
+.li-btn-remove{
+    position: relative;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: none;
+    opacity: 70%;
+    color: black;
+    background-color: white;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+}
+.li-btn-remove:hover{
+   
+    opacity: 90%;
+    
+}
+.timeout{
+    top: -35px;
+    margin-left: 35%;
+    color: white;
+    font-size: larger;
+    position: absolute;
+    border: 1px;
+}
+input[type="checkbox"] {
+    accent-color: white;
+    }
