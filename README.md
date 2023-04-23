@@ -1,6 +1,6 @@
 # ZenSpace
 
-Check it out [Here.](https://github.com/facebook/create-react-app).
+Check it out [Here](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
