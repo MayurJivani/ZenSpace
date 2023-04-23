@@ -395,7 +395,7 @@ export default function Sidebar(){
                 </TodoProvider>
              </div>
                 {step == 1 && <YouTube videoId={propaud} opts={musicopts} onReady={onMusicReady}/>}
-                <button className={volumeBTN ? 'volumeBTN ummute' : 'volumeBTN mute'} onClick={onVol}><i class='bx bx-volume-full bx-md' id="iconstyle"></i></button>
+                <button className={volumeBTN ? 'volumeBTN ummute' : 'volumeBTN mute'} onClick={onVol}><i class='bx bx-volume-full bx-sm' id="iconstyle"></i></button>
                 
         </div>
         

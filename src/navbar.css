@@ -444,13 +444,14 @@ body.dark .home .text {
 .volumeBTN{
     position: fixed;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     background-color: rgb(106, 93, 254);
     right: 20px;
     bottom: 10px;
     border: none;
     background-size: auto;
+    font-size: 28px;
 }
 .volumeBTN:hover{
     box-shadow: 0 5px 50px rgba(106, 93, 254, 0.8);
